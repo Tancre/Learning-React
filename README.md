@@ -1,0 +1,1 @@
+A series of React apps I built for the course 'React - The Complete Guide 2023 (incl. React Router & Redux') 
