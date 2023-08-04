@@ -1,0 +1,37 @@
+.form {
+  padding: 0.8rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.form-control {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.3rem 1rem;
+  border: none;
+  background: purple;
+  color: #ffffff;
+  cursor: pointer;
+}
