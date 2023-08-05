@@ -14,6 +14,10 @@ const emailReducer = (state, action) => {
   return { value: "",  isValid: false,};
 };
 
+const passwordReducer = (state, action) => {
+  return { value: "",  isValid: false,};
+}
+
 const Login = (props) => {
   // const [enteredEmail, setEnteredEmail] = useState("");
   // const [emailIsValid, setEmailIsValid] = useState();
@@ -22,6 +26,11 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
     value: "",
     isValid: null,
   });
