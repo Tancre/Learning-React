@@ -25,6 +25,7 @@
 }
 
 .control input {
+  width: 100%;
   flex: 3;
   font: inherit;
   padding: 0.35rem 0.35rem;
@@ -47,10 +48,9 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .control {
     align-items: center;
     flex-direction: row;
   }
-
-}
+} */
