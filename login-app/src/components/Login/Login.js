@@ -6,15 +6,21 @@ import Button from "../UI/Button/Button";
 
 const emailReducer = (state, action) => {
   if (action.type === 'USER_INPUT') {
-    return {value: action.val, isValid: action.val.includes('@')}
+    return {value: action.val, isValid: action.val.trim().length > 6}
   }
   if (action.type === 'INPUT_BLUR') {
-    return {value: state.value, isValid: state.value.includes('@')}
+    return {value: state.value, isValid: state.value.trim().length > 6}
   }
   return { value: "",  isValid: false,};
 };
 
 const passwordReducer = (state, action) => {
+  if (action.type === 'USER_INPUT') {
+    return {value: action.val, isValid: action.val.includes('@')}
+  }
+  if (action.type === 'INPUT_BLUR') {
+    return {value: state.value, isValid: state.value.includes('@')}
+  }
   return { value: "",  isValid: false,};
 }
 
@@ -44,7 +50,7 @@ const Login = (props) => {
   };
 
   const passwordChangeHandler = (event) => {
-    setEnteredPassword(event.target.value);
+    dispatchPassword({type: 'USER_INPUT', val: event.target.value})
 
     setFormIsValid(
       emailState.isValid && event.target.value.trim().length > 6
@@ -56,7 +62,7 @@ const Login = (props) => {
   };
 
   const validatePasswordHandler = () => {
-    setPasswordIsValid(passwordState.isValid);
+    dispatchPassword({type: 'INOUT_BLUR'})
   };
 
   const submitHandler = (event) => {
