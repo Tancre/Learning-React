@@ -1,8 +1,13 @@
 import React from 'react'
 
-const MealItemForm = () => {
+import classes from './MealItemForm.module.css'
+
+const MealItemForm = props => {
   return (
-    <div>MealItemForm</div>
+    <form className={classes.form}>
+      <input />
+      <button>+ Add</button>
+    </form>
   )
 }
 
